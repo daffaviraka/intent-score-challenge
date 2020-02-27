@@ -106,5 +106,16 @@ public class MatchActivity extends AppCompatActivity {
             }
         }
     }
+    public void handleResult(View view) {
+        Intent intent = new Intent(this,ResultActivity.class);
+        intent.putExtra("homename", homename);
+        intent.putExtra("awayname", awayname);
+        intent.putExtra("HomeTextScore",homeScore);
+        intent.putExtra("AwayTextScore",awayScore);
+        startActivity(intent);
+        // intent.putExtra(AWAYIMG_KEY, awayURL);
+
+        startActivity(intent);
+    }
 
 }
