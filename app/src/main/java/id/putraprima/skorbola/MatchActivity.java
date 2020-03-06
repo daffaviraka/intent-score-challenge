@@ -24,6 +24,8 @@ public class MatchActivity extends AppCompatActivity {
     private TextView awayTextScore;
     String homename;
     String awayname;
+    String homescorer = "";
+    String awayscorer = "";
 
     private ImageView homeImage;
     private ImageView awayImage;
@@ -86,11 +88,13 @@ public class MatchActivity extends AppCompatActivity {
                 homeScore++;
                 homeTextScore.setText(String.valueOf(homeScore));
                 // Get String data from Intent
-                String returnString = data.getStringExtra("keyName");
+                String tmp = "\n" + data.getStringExtra("keyName") + " " +
+                        data.getStringExtra("keyName2") + " \'";
 
+                homescorer = homescorer + tmp;
                 // Set text view with string
-                TextView textView = (TextView) findViewById(R.id.scorerHome);
-                textView.setText(returnString);
+                TextView textView = findViewById(R.id.scorerHome);
+                textView.setText(homescorer);
             }
         }
         else if (requestCode == AWAY_REQUEST_CODE) {
@@ -98,11 +102,13 @@ public class MatchActivity extends AppCompatActivity {
                 awayScore++;
                 awayTextScore.setText(String.valueOf(awayScore));
                 // Get String data from Intent
-                String returnString = data.getStringExtra("keyName");
+                String tmp = "\n" + data.getStringExtra("keyName") + " " +
+                        data.getStringExtra("keyName2") + " \'" ;
 
+                awayscorer = awayscorer + tmp;
                 // Set text view with string
-                TextView textView = (TextView) findViewById(R.id.scorerAway);
-                textView.setText(returnString);
+                TextView textView = findViewById(R.id.scorerAway);
+                textView.setText(awayscorer);
             }
         }
     }
