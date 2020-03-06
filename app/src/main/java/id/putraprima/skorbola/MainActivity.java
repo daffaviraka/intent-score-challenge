@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements Validator.ValidationListener {
-
+    
 
     Validator validator;
     public static final String HOME_KEY = "home";
