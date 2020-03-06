@@ -14,7 +14,7 @@ import android.widget.TextView;
 import java.io.IOException;
 
 public class MatchActivity extends AppCompatActivity {
-
+    
     private static final int HOME_REQUEST_CODE = 1;
     private static final int AWAY_REQUEST_CODE = 2;
 
