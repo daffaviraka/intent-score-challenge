@@ -16,6 +16,7 @@ public class ScorerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scorer);
+        
     }
     // "Send text back" button click
     public void handleSubmitGoal(View view) {
